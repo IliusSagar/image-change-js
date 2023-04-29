@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Change JS</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        .card{
+  margin: 30px;
+}
+
+.inline-container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+  
+  .card {
+    display: inline-block !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+    </style>
+
+</head>
+<body>
+
+    
+    <div class="card" style="text-align: center;">
+        <img src="//www.tutsmake.com/wp-content/uploads/2019/08/How-to-Encode-Decode-a-URL-Using-JavaScript.jpeg" width="350" id="imagechange" alt="Poker Card">
+    </div>
+ 
+ <div class="inline-container">
+       <div class="card">
+        <img src="https://webnemer.nl/wp-content/uploads/2018/07/freeimages-gratis-afbeelding.jpg" width="200" class="img-src" alt="Adelaar">
+    </div>
+          <div class="card">
+        <img src="https://wpjournalist.nl/wp-content/uploads/2018/04/WordPress-plugins-om-je-afbeeldingen-te-comprimeren.jpg" width="200" class="img-src" alt="Internet">
+    </div>
+          <div class="card">
+        <img src="https://cdn.myonlinestore.eu/94119315-6be1-11e9-a722-44a8421b9960/image/cache/full/7f5b2a0d791a546dae4c663c7563ff32a3a5d0ad.jpg" width="200" class="img-src" alt="Rozen">
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+
+$('.card').click(function(){
+
+  $imgsrc = $(this).find('.img-src').attr('src');
+  $("#imagechange").attr("src",$imgsrc).fadeIn(1000);
+ 
+});
+
+});
+</script>
+
+    
+</body>
+</html>
